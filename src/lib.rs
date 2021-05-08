@@ -19,6 +19,10 @@ pub fn get_current_timestamp0() -> String {
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
+#[wasm_bindgen] // #[no_mangle]
+pub fn wasm_to_uppercase(name: &str) -> String {
+    return name.to_uppercase();
+}
 
 // This is like the `main` function, except for JavaScript.
 #[wasm_bindgen(start)]
