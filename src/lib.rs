@@ -1,6 +1,13 @@
 use wasm_bindgen::prelude::*;
 use web_sys::console;
 
+/// タイムスタンプ "%Y-%m-%d %H:%M:%S%.3f" を返します。
+// #[wasm_bindgen]
+pub fn get_current_timestamp0() -> String {
+	let date = chrono::Local::now();
+	return format!("{}", date.format("%Y-%m-%d %H:%M:%S%.3f"));
+}
+
 
 // When the `wee_alloc` feature is enabled, this uses `wee_alloc` as the global
 // allocator.
@@ -14,14 +21,22 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 // This is like the `main` function, except for JavaScript.
 #[wasm_bindgen(start)]
 pub fn main_js() -> Result<(), JsValue> {
+
     // This provides better error messages in debug mode.
     // It's disabled in release mode so it doesn't bloat up the file size.
     #[cfg(debug_assertions)]
     console_error_panic_hook::set_once();
 
-
+    
     // Your code goes here!
-    console::log_1(&JsValue::from_str("Hello world!"));
+    {
+        // let date = chrono::Local::now();
+        // let _current_timestamp = format!("{}", date.format("%Y-%m-%d %H:%M:%S%.3f"));
+        // let _current_timestamp = get_current_timestamp0();
+        // let message = format!("{} [trace] [wasm] どうも", &current_timestamp);
+        let message = "[trace] [wasm] どうも";
+        console::log_1(&JsValue::from_str(message));
+    }
 
     Ok(())
 }
