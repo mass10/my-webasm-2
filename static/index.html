@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>My Rust + Webpack project!</title>
 		<style>
 			html, body {
 				margin: 0;
 			}
+
+			div.header {
+				padding: 20px;
+				background-color: #202020;
+			}
+
+			a.header-text {
+				text-decoration: none;
+			}
+
+			span.header-text {
+				font-size: 30px;
+				color: #f0f0f0;
+			}
+
+			div.main-content {
+				padding: 30px;
+			}
 		</style>
 	</head>
 	<body>
-		<div style="padding: 20px; background-color: #202020;"><a href="./" style="text-decoration: none"><span style="font-size: 30px; color: #f0f0f0">はじめての WebAssembly</span></a></div>
-		<div style="padding: 30px">
+		<div class="header"><a href="./" class="header-text"><span class="header-text">はじめての WebAssembly</span></a></div>
+		<div class="main-content">
 			<script src="index.js"></script>
 			ページが表示されました。
 		</div>
