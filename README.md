@@ -1,3 +1,11 @@
+# About
+
+はじめての WebAssembly 
+
+# ORIGINAL
+
+* https://github.com/rustwasm/rust-webpack-template
+
 ## How to install
 
 ```sh
