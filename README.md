@@ -41,6 +41,6 @@ npm test -- --chrome
 npm test -- --safari
 ```
 
-# Find details on
+# Find details at
 
 https://github.com/rustwasm/rust-webpack-template
