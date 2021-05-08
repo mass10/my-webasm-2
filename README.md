@@ -8,9 +8,9 @@
 
 # プロジェクトの作り方
 
-```CMD
+```sh
 npm init rust-webpack my-wasm-example-1
-CD my-wasm-example-1
+cd my-wasm-example-1
 npm install
 ```
 
