@@ -8,6 +8,7 @@ categories = ["wasm"]
 readme = "README.md"
 edition = "2018"
 license = "MIT"
+repository = "https://github.com/mass10/my-webasm-2"
 
 [lib]
 crate-type = ["cdylib"]
@@ -32,7 +33,7 @@ wasm-bindgen = "0.2.45"
 wee_alloc = { version = "0.4.2", optional = true }
 
 # date and time library
-chrono = { version = "*", feature = "wasmbind" }
+chrono = { version = "*", features = ["wasmbind"] }
 
 # The `web-sys` crate allows you to interact with the various browser APIs,
 # like the DOM.
