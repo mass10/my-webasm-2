@@ -24,17 +24,17 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 #[wasm_bindgen(start)]
 pub fn main_js() -> Result<(), JsValue> {
 
-    // This provides better error messages in debug mode.
-    // It's disabled in release mode so it doesn't bloat up the file size.
-    #[cfg(debug_assertions)]
-    console_error_panic_hook::set_once();
-    
-    // Your code goes here!
-    {
-        let current_timestamp = get_current_timestamp0();
-        let message = format!("{} [trace] [wasm] どうも", &current_timestamp);
-        console::log_1(&JsValue::from_str(&message));
-    }
+	// This provides better error messages in debug mode.
+	// It's disabled in release mode so it doesn't bloat up the file size.
+	#[cfg(debug_assertions)]
+	console_error_panic_hook::set_once();
+	
+	// Your code goes here!
+	{
+		let current_timestamp = get_current_timestamp0();
+		let message = format!("{} [trace] [wasm] どうも", &current_timestamp);
+		console::log_1(&JsValue::from_str(&message));
+	}
 
-    Ok(())
+	Ok(())
 }
